@@ -7,7 +7,7 @@ apt-get install sbt
 mkdir /tmp/download
 cd /tmp/download
 
-wget -T 10 http://downloads.typesafe.com/scala/2.10.5/scala-2.10.5.tgz?_ga=1.106928195.1176586385.1430617673 \
+wget -T 10 http://downloads.typesafe.com/scala/2.10.5/scala-2.10.5.tgz \
   -O scala-2.10.5.tgz
 mkdir -p /usr/local/share/scala
 tar -xvf scala-2.10.5.tgz -C /usr/local/share/scala/
