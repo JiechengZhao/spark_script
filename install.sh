@@ -22,7 +22,10 @@ export SPARK_HOME=/usr/local/share/spark/spark-1.3.1-bin-hadoop2.6
 chown -R root:root $SCALA_HOME
 chown -R root:root $SPARK_HOME
 mkdir $SPARK_HOME/logs
-chmod +w $SPARK_HOME/logs
+chmod a+w $SPARK_HOME/logs
+
+mkdir $SPARK_HOME/work
+chmod a+w $SPARK_HOME/work
 
 echo "
 export SCALA_HOME=$SCALA_HOME
