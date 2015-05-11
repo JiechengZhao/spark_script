@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #install the java
-
+sudo apt-get update
 sudo apt-get install openjdk-7-jre-headless
 
 #install the spark to $HOME/spark
