@@ -1,12 +1,8 @@
 #!/bin/bash
 
-#install the sbt
-#see http://www.scala-sbt.org
-#see http://www.scala-sbt.org/0.13/tutorial/Installing-sbt-on-Linux.html
+#install the java
 
-echo "deb http://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
-sudo apt-get update
-sudo apt-get install sbt
+sudo apt-get install openjdk-7-jre-headless
 
 #install the spark to $HOME/spark
 #see http://spark.apache.org
@@ -17,9 +13,11 @@ mkdir /tmp/download
 cd /tmp/download
 
 wget http://apache.fayea.com/spark/spark-1.3.1/spark-1.3.1-bin-hadoop2.6.tgz
+
+# check the md5 code of the tgz.
 #see http://www.apache.org/dist/spark/spark-1.3.1/spark-1.3.1-bin-hadoop2.6.tgz.md5
 if [[ $(md5sum /tmp/download/spark-1.3.1-bin-hadoop2.6.tgz) != "b71cda077405411ef9c450ec4b43b56b  /tmp/download/spark-1.3.1-bin-hadoop2.6.tgz" ]]
-	then echo "the md5 checksum doesn't match"
+	then echo "The md5 checksum doesn't match!"
 	return 1
 fi
 
