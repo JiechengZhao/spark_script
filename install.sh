@@ -2,7 +2,7 @@
 
 #install the java
 sudo apt-get update
-sudo apt-get install openjdk-7-jre-headless
+sudo apt-get －y install openjdk-7-jre-headless
 
 #install the spark to $HOME/spark
 #see http://spark.apache.org
@@ -24,7 +24,7 @@ fi
 mkdir -p $HOME/spark
 tar -xvf spark-1.3.1-bin-hadoop2.6.tgz -C $HOME/spark
 
-export SPARK_HOME=$HOME/spark/spark-1.3.1-bin-hadoop2.6
+SPARK_HOME=$HOME/spark/spark-1.3.1-bin-hadoop2.6
 
 echo "
 export SPARK_HOME=$SPARK_HOME
